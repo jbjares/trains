@@ -7,6 +7,7 @@ for train in "$(find . -iname 'train*' -type d)"; do
   # Build the train and tag with the local registry
   cd $train
     docker build --rm --no-cache --pull -t "${train_name}" .
+    docker tag "${train_name}" "localhost:5000/${train_name}"
     docker tag "${train_name}" "registry:5000/${train_name}"
   cd ..
 done
