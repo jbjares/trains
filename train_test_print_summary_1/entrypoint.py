@@ -10,6 +10,9 @@ class SummaryTrain(Train):
 
     def print_summary(self):
         print("TEST_PRINT_SUMMARY_1")
+    
+    def check_requirements(self):
+        pass
 
 if __name__ == '__main__':
     cmd_for_train(SummaryTrain())
